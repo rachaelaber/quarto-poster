@@ -1,10 +1,10 @@
 ---
-title: "Immune priming effects of prior influenza vaccination on subsequent vaccine response"
+title: "Analysis of complementary data streams for baseline ecosystem assessment"
 format:
   poster-typst:
     size: "40x22.5"
-    poster-authors: "Murphy John^, Ted Ross*, Andrea Sant†, Andreas Handel^"
-    departments: "^Department of Epidemiology and Biostatistics, University of Georgia, Athens, GA, USA · *Cleveland Clinic Florida Research & Innovation Center, Port St. Lucie, FL, USA · †Department of Microbiology and Immunology, University of Rochester, Rochester, NY, USA"
+    poster-authors: "Rachael Aber^, Khadijah Homolka^, Hans Daubenberger^"
+    departments: "^Department of Natural Resources, Port Gamble S'Klallam Tribe, Kingston, WA, USA"
     poster-banner: "figures/poster-banner.svg"
     header-text-color: "111111"
     show-footer: "false"
@@ -12,9 +12,9 @@ format:
     num-columns: 1
     body-font-size: 11
     title-row-size: 4.15
-    title-font-size: 30
-    authors-font-size: 15
-    department-font-size: 9
+    title-font-size: 40
+    authors-font-size: 25
+    department-font-size: 20
     margin-top: 0.25
     margin-left: 0.55
     margin-right: 0.55
@@ -46,25 +46,25 @@ execute:
   [
     #sec[Introduction]
     #para[
-      Seasonal influenza vaccination is the primary strategy to reduce influenza-related illness and death. Multiple vaccine types are available. Previous work has shown (1) vaccine formulation influences immune response [1–4] and (2) repeated annual vaccination can reduce antibody responses [5–7]. Optimal vaccine choice and sequencing remain uncertain and may vary by age. This study investigates how prior vaccine type affects subsequent H1N1 antibody responses across a broad adult population.
+      Quantifying baseline ecosystem characteristics remains an important step toward emergency preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA water quality and purse seine data in concert may lead to more comprehensive conclusions about ecosytem characteristics.
     ]
 
     #v(0.08in)
-    #image("figures/original-assets/crops/picture-9.png", width: 100%)
+    #image("figures/original-assets/crops/map.png", width: 100%)
 
     #v(0.08in)
     #sec[Methods]
     #sub[Data]
     #para[
       #list(
-        [We analyzed data from two prior influenza vaccine studies: a longitudinal cohort (FluVac, 2013–2025) and a randomized clinical trial (URIV, 2015–2020).],
-        [Across multiple U.S. sites, participants received various influenza vaccine formulations.],
-        [Serum samples were collected pre- and post-vaccination, and antibodies were measured.],
+        [We analyzed data from July 2025 from a project funded by the EPA at various sites in Washington: OAK, PBN, PBSH, SJI_WI, SQU.],
+        [At each site, eDNA, seine, and water quality data were collected.],
+        [Acoustic transects were performed using a BioSonics DTX.],
       )
     ]
-    #text(size: 8.2pt, weight: 700)[Table 1: Number of observations by prior and current vaccine.]
+    #text(size: 8.2pt, weight: 700)[Table 1: .]
     #v(0.03in)
-    #image("figures/original-assets/crops/picture-252.png", width: 94%)
+    #image("figures/original-assets/crops/map.png", width: 100%)
 
     #sub[Statistical Analysis]
     #para[
@@ -76,7 +76,7 @@ execute:
   ],
 
   [
-    #sec[Univariable Analysis]
+    #sec[Acoustic Data Analysis]
     #grid(columns: (1fr, 1fr), column-gutter: 0.12in,
       [#align(center)[#text(size: 10pt, weight: 700)[Fold-change]]],
       [#align(center)[#text(size: 10pt, weight: 700)[Post-vaccination titer]]],

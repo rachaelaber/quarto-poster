@@ -46,7 +46,7 @@ execute:
   [
     #sec[Introduction]
     #para[
-      Quantifying baseline ecosystem characteristics remains an important step toward emergency preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA water quality and purse seine data in concert may lead to more comprehensive conclusions about ecosytem characteristics.
+      Quantifying baseline ecosystem characteristics remains an important step toward emergency (e.g., oil spill) preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA, water quality and purse seine data in concert may lead to more comprehensive conclusions about baseline ecosytem characteristics.
     ]
 
     #v(0.08in)
@@ -57,7 +57,7 @@ execute:
     #sub[Data]
     #para[
       #list(
-        [We analyzed data from July 2025 from a project funded by the EPA at various sites in Washington: OAK, PBN, PBSH, SJI_WI, SQU.],
+        [We analyzed data from July 2025 from a project funded by the EPA at four locations in Washington (Figure 1): Oak Bay, (Partridge Bank North Slope and Partridge Bank Shoal), San Juan Islands (Willow Island), and Squamish Harbor.],
         [At each site, eDNA, seine, and water quality data were collected.],
         [Acoustic transects were performed using a BioSonics DTX.],
       )

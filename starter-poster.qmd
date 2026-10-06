@@ -2,9 +2,9 @@
 title: "Analysis of complementary data streams for baseline ecosystem assessment"
 format:
   poster-typst:
-    size: "40x22.5"
-    poster-authors: "Rachael Aber^, Khadijah Homolka^, Hans Daubenberger^"
-    departments: "^Department of Natural Resources, Port Gamble S'Klallam Tribe, Kingston, WA, USA"
+    size: "40x30"
+    poster-authors: "Rachael Aber, Khadijah Homolka, Hans Daubenberger"
+    departments: "Department of Natural Resources, Port Gamble S'Klallam Tribe, Kingston, WA, USA"
     poster-banner: "figures/poster-banner.svg"
     header-text-color: "111111"
     show-footer: "false"
@@ -76,30 +76,53 @@ execute:
   ],
 
   [
-    #sec[Acoustic Data Analysis]
+    #sec[Acoustic data analysis]
+        #para[
+      Quantifying baseline ecosystem characteristics remains an important step toward emergency (e.g., oil spill) preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA, water quality and purse seine data in concert may lead to more comprehensive conclusions about baseline ecosytem characteristics.
+    ]
+     #v(0.08in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.12in,
-      [#align(center)[#text(size: 10pt, weight: 700)[Fold-change]]],
-      [#align(center)[#text(size: 10pt, weight: 700)[Post-vaccination titer]]],
+      [#align(center)[#text(size: 14pt, weight: 700)[Cell Sv mean v. depth layer]]],
+      [#align(center)[#text(size: 14pt, weight: 700)[Center of mass v. water column depth]]],
     )
     #v(0.04in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.06in,
       [#image("figures/original-assets/crops/picture-14.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-44.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-13.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-42.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-14.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-44.png", width: 100%)],
+      [#image("figures/original-assets/crops/picture-13.png", width: 100%)]
     )
+    
+    #v(0.08in)
+    #sec[eDNA data analysis]
+    #sub[Data]
+    #para[
+      #list(
+        [We analyzed data from July 2025 from a project funded by the EPA at four locations in Washington (Figure 1): Oak Bay, (Partridge Bank North Slope and Partridge Bank Shoal), San Juan Islands (Willow Island), and Squamish Harbor.],
+        [At each site, eDNA, seine, and water quality data were collected.],
+        [Acoustic transects were performed using a BioSonics DTX.],
+      )
+    ]
+    #text(size: 8.2pt, weight: 700)[Table 1: .]
+    #v(0.03in)
+    #image("figures/original-assets/crops/hists.png", width: 50%)
+
+    #sub[PERMANOVA]
+    #para[
+      #list(
+        [A PERMANOVA analysis of site and depth as explanatory variables revealed no statistical sig.],
+        [A PERMANOVA analysis stratified by site with Sv mean and mean temperature as explanatory variables revealed no statistical sig.],
+      )
+    ]
+    
   ],
 
   [
-    #sec[Multivariable Regression Analysis]
+    #sec[Assessment of Complementary Data Streams]
     #v(0.03in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.07in,
       [#image("figures/original-assets/crops/picture-21.png", width: 100%)],
       [#image("figures/original-assets/crops/picture-24.png", width: 100%)],
       [#image("figures/original-assets/crops/picture-21.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-24.png", width: 100%)],
+      [#image("figures/original-assets/crops/picture-24.png", width: 100%)]
     )
 
     #v(0.07in)

@@ -1,5 +1,5 @@
 ---
-title: "Analysis of complementary data streams for baseline ecosystem assessment"
+title: "Analysis of complementary data streams for ecosystem assessment"
 format:
   poster-typst:
     size: "40x30"
@@ -12,9 +12,9 @@ format:
     num-columns: 1
     body-font-size: 11
     title-row-size: 4.15
-    title-font-size: 40
-    authors-font-size: 25
-    department-font-size: 20
+    title-font-size: 45
+    authors-font-size: 30
+    department-font-size: 25
     margin-top: 0.25
     margin-left: 0.55
     margin-right: 0.55
@@ -30,7 +30,7 @@ execute:
 #let uga-black = rgb("111111")
 #let colw = 12.55in
 #let gutter = 0.42in
-#let sec(title) = block(fill: red, width: 100%, inset: (x: 8pt, y: 4.5pt))[#text(fill: white, weight: 700, size: 16pt)[#title]]
+#let sec(title) = block(fill: red, width: 100%, inset: (x: 8pt, y: 4.5pt))[#text(fill: white, weight: 700, size: 20pt)[#title]]
 #let sub(title) = [#v(5pt)#text(weight: 700, size: 11pt)[#title]#v(2pt)]
 #let para(body) = block(width: 100%)[#text(size: 9.2pt)[#body]]
 #let small(body) = text(size: 7.0pt)[#body]
@@ -46,7 +46,7 @@ execute:
   [
     #sec[Introduction]
     #para[
-      Quantifying baseline ecosystem characteristics remains an important step toward emergency (e.g., oil spill) preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA, water quality and purse seine data in concert may lead to more comprehensive conclusions about baseline ecosytem characteristics.
+      Quantifying ecosystem characteristics remains an important step toward data-driven conservation and restoration policy, and multiple data streams are available to this end. Data from capture-based surveys have been used alongside data from acoustic surveys for species identifiation "We used acoustic data and biological sampling information collected with two midwater trawl nets from a dedicated voyage, to train a classification tree algorithm" [1], but there is recent interest in non-lethal eDNA surveying as a species identification tool alongside acoustic surveying: previous work has 'allowed the observation of shifts in eDNA profiles concurrent with the movement of organisms in the DVM as measured by acoustic sensors'[2] and 'tested the utility of paired hydroacoustic and eDNA surveys by replicating samples over a 12-h period along the depth gradient of pelagic lake habitat where the fish community exhibits diel vertical migration' [3]. This study investigates eDNA, purse seine, acoustic and water quality data sets gathered in at three sites in July 2025 as potentially complementary information for inference of ecosystem characteristics.
     ]
 
     #v(0.08in)
@@ -54,12 +54,13 @@ execute:
 
     #v(0.08in)
     #sec[Methods]
-    #sub[Data]
+    #sub[Data Collection]
     #para[
       #list(
-        [We analyzed data from July 2025 from a project funded by the EPA at four locations in Washington (Figure 1): Oak Bay, (Partridge Bank North Slope and Partridge Bank Shoal), San Juan Islands (Willow Island), and Squamish Harbor.],
-        [At each site, eDNA, seine, and water quality data were collected.],
-        [Acoustic transects were performed using a BioSonics DTX.],
+        [At each site, acoustic transects were performed using a BioSonics DTX [more info on transect set-up]],
+        [Concurrent eDNA samples were collected at depths to capture [] at a point selected [how]],
+        [Concurrent purse seine captures started at [bottom depth?] were conducted, and fish were sorted []],
+        [Water quality data were collected using an EXO[?] Multiparameter sonde at the [same?] point where purse seining and eDNA sampling were completed]
       )
     ]
     #text(size: 8.2pt, weight: 700)[Table 1: .]
@@ -108,8 +109,8 @@ execute:
     #sub[PERMANOVA]
     #para[
       #list(
-        [A PERMANOVA analysis of site and depth as explanatory variables revealed no statistical sig.],
-        [A PERMANOVA analysis stratified by site with Sv mean and mean temperature as explanatory variables revealed no statistical sig.],
+        [A PERMANOVA analysis of site and depth as explanatory variables revealed no statistical significance.],
+        [A PERMANOVA analysis stratified by site with Sv mean and mean temperature as explanatory variables revealed no statistical significance],
       )
     ]
     
@@ -148,13 +149,14 @@ execute:
     #v(0.05in)
     #sec[References]
     #small[
-      [1] B. J. Cowling et al., “Comparative Immunogenicity of Several Enhanced Influenza Vaccine Options for Older Adults,” Clin Infect Dis, 2020.\
-      [2] S. Gouma et al., “Comparison of Human H3N2 Antibody Responses Elicited by Egg-Based, Cell-Based, and Recombinant Protein–Based Influenza Vaccines,” Clin Infect Dis, 2019.\
-      [3] S. Zhong et al., “Influenza A(H3N2) Antibody Responses to Standard-Dose Versus Enhanced Influenza Vaccine Immunogenicity,” J Infect Dis, 2024.\
-      [4] D. F. Hoft et al., “Comparisons of the Humoral and Cellular Immune Responses Induced by Live Attenuated and Inactivated Influenza Vaccine,” CVI, 2017.\
-      [5] M.-H. Sung et al., “Assessment of Humoral Immune Responses to Repeated Influenza Vaccination in a Multiyear Cohort,” J Infect Dis, 2024.\
-      [6] B. J. Cowling et al., “Dynamics of the Immune Responses to Repeat Influenza Vaccination Exposures,” Clin Infect Dis, 2024.\
-      [7] S. Khurana et al., “Repeat vaccination reduces antibody affinity maturation across different influenza vaccine platforms in humans,” Nat Commun, 2019.
+      [1] P. C. Escobar-Flores et al., "Multiple sampling methods to develop indices of mid-trophic levelsabundance in open ocean ecosystems", Limnol Oceanogr Methods, 2022.
+      [2] C. G. Easson et al., "Combined eDNA and Acoustic Analysis Reflects Diel Vertical Migration of Mixed Consortia in the Gulf of Mexico", Front Mar Sci, 2020.\
+      [3] V.E. Kopf et al. "Combining Hydroacoustics and eDNA to Estimate Species-Specific Biomass in a Pelagic Fish Community", Environ DNA, 2025. \
+      [4] \
+      [5] \
+      [6] \
+      [7] \
+      [8] 
     ]
   ],
 )

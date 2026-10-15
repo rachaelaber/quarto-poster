@@ -57,9 +57,9 @@ execute:
     #sub[Data Collection]
     #para[
       #list(
-        [At each site, acoustic transects were performed using a BioSonics DTX [more info on transect set-up]],
+        [At each site, acoustic transects were performed using a BioSonics DTX to capture an area representative of the purse seine catch],
         [Concurrent eDNA samples were collected at depths to capture [] at a point selected [how]],
-        [Concurrent purse seine captures started at [bottom depth?] were conducted, and fish were sorted []],
+        [Concurrent purse seine captures started at a target of 30m, and used a herring net],
         [Water quality data were collected using an EXO[?] Multiparameter sonde at the [same?] point where purse seining and eDNA sampling were completed]
       )
     ]

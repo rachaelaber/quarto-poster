@@ -46,7 +46,7 @@ execute:
   [
     #sec[Introduction]
     #para[
-      Quantifying ecosystem characteristics remains an important step toward data-driven conservation and restoration policy, and multiple data streams are available to this end. Data from capture-based surveys have been used alongside data from acoustic surveys for species identifiation "We used acoustic data and biological sampling information collected with two midwater trawl nets from a dedicated voyage, to train a classification tree algorithm" [1], but there is recent interest in non-lethal eDNA surveying as a species identification tool alongside acoustic surveying: previous work has 'allowed the observation of shifts in eDNA profiles concurrent with the movement of organisms in the DVM as measured by acoustic sensors'[2] and 'tested the utility of paired hydroacoustic and eDNA surveys by replicating samples over a 12-h period along the depth gradient of pelagic lake habitat where the fish community exhibits diel vertical migration' [3]. This study investigates eDNA, purse seine, acoustic and water quality data sets gathered in at three sites in July 2025 as potentially complementary information for inference of ecosystem characteristics.
+      Quantifying ecosystem characteristics remains an important step toward data-driven conservation and restoration policy, and multiple data streams are available to this end. Acoustic data have been used in concert with biological sampling information collected for example with trawl nets [1], but there is recent interest in non-lethal eDNA sampling as a tool to complement acoustic surveying, for example by assessment of changes in eDNA profiles that occur with acoustic-sensor-measured movement of organisms [2]. There have additionally been assessment of paired hydroacoustic and eDNA surveys by replicating samples, for example along the depth gradient of pelagic lake habitat [3]. The current study investigates eDNA, purse seine, acoustic and water quality data gathered at three sites in July 2025 as potentially complementary for quantification of ecosystem characteristics.
     ]
 
     #v(0.08in)
@@ -57,21 +57,23 @@ execute:
     #sub[Data Collection]
     #para[
       #list(
-        [At each site, acoustic transects were performed using a BioSonics DTX to capture an area representative of the purse seine catch],
-        [Concurrent eDNA samples were collected at depths to capture [] at a point selected [how]],
-        [Concurrent purse seine captures started at a target of 30m, and used a herring net],
-        [Water quality data were collected using an EXO[?] Multiparameter sonde at the [same?] point where purse seining and eDNA sampling were completed]
+        [Three sites (Oak Bay, San Juan Islands (Willow Island), and Squamish Harbor) were selected to capture a broad spatial extent around the Salish Sea.],
+        [At each site, purse seine captures were conducted using a herring net and began at a depth of between 33.1 meters and 44.3 meters.],
+        [Acoustic transects were performed using a BioSonics DTX to capture an area representative of the purse seine catch at each site.],
+        [Concurrent eDNA samples were collected at six depths at a central point at each site.],
+        [Water quality data were collected at the same central point at each site using an EXO[3?] Multiparameter sonde.]
       )
     ]
     #text(size: 8.2pt, weight: 700)[Table 1: .]
     #v(0.03in)
-    #image("figures/original-assets/crops/map.png", width: 100%)
+    #image("figures/original-assets/crops/sv_v_reads.png", width: 100%)
 
     #sub[Statistical Analysis]
     #para[
       #list(
-        [Multivariable linear regression was used to model antibody fold-change as a function of pre-titer, prior vaccine, age, current vaccine strain, and vaccine strain change.],
-        [Models were fit by current vaccine group.],
+        [Purse seine data is indexed by site, sonde data is indexed by site and depth (layer), acoustic data is 
+        indexed by site and depth layer, and eDNA data is indexed by site and discrete depth (layer).],
+        [Thus, models that assume independence (e.g., the two-group t-tests, unrestricted-permuatations PERMANOVA) are inappropriate except for the data is aggregated to the site-level.]
       )
     ]
   ],
@@ -79,17 +81,17 @@ execute:
   [
     #sec[Acoustic data analysis]
         #para[
-      Quantifying baseline ecosystem characteristics remains an important step toward emergency (e.g., oil spill) preparedness and restoration efficacy. Multiple data types are available to this end. Previous work has shown (1)  [1–4] and (2)  [5–7]. Optimal data collection and analysis to create reliable inference is paramount when supporting decision making by tribal governments. This study investigates how four distinct data sources compare to one another, and how analysis of acoustic, eDNA, water quality and purse seine data in concert may lead to more comprehensive conclusions about baseline ecosytem characteristics.
+      Acoustic data from the BioSonics DTX were processed in EchoView, and Sv integration by cells was exported.
     ]
      #v(0.08in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.12in,
       [#align(center)[#text(size: 14pt, weight: 700)[Cell Sv mean v. depth layer]]],
-      [#align(center)[#text(size: 14pt, weight: 700)[Center of mass v. water column depth]]],
+      [#align(center)[#text(size: 14pt, weight: 700)[Cell proportion occupied v. depth layer]]],
     )
     #v(0.04in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.06in,
       [#image("figures/original-assets/crops/picture-14.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-13.png", width: 100%)]
+      [#image("figures/original-assets/crops/picture-15.png", width: 100%)]
     )
     
     #v(0.08in)
@@ -97,22 +99,25 @@ execute:
     #sub[Data]
     #para[
       #list(
-        [We analyzed data from July 2025 from a project funded by the EPA at four locations in Washington (Figure 1): Oak Bay, (Partridge Bank North Slope and Partridge Bank Shoal), San Juan Islands (Willow Island), and Squamish Harbor.],
-        [At each site, eDNA, seine, and water quality data were collected.],
-        [Acoustic transects were performed using a BioSonics DTX.],
+        [Reads from a MiFish primer set were assigned using the Tronko algorithm [4]],
+        [Assignments with less than or equal to 10% divergence were retained.],
       )
     ]
     #text(size: 8.2pt, weight: 700)[Table 1: .]
     #v(0.03in)
-    #image("figures/original-assets/crops/hists.png", width: 50%)
+    #image("figures/original-assets/crops/salsep.png", width: 50%)
 
-    #sub[PERMANOVA]
+    #sub[NMDS]
     #para[
       #list(
-        [A PERMANOVA analysis of site and depth as explanatory variables revealed no statistical significance.],
-        [A PERMANOVA analysis stratified by site with Sv mean and mean temperature as explanatory variables revealed no statistical significance],
+        [Stress = 0.20],
+        [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth. However, there may be further depth dependence structure that led to reduced power.],
       )
     ]
+    #text(size: 8.2pt, weight: 700)[Table 1: .]
+    #v(0.03in)
+    #image("figures/original-assets/crops/nmds.png", width: 50%)
+    #image("figures/original-assets/crops/stressplot.png", width: 50%)
     
   ],
 
@@ -120,10 +125,8 @@ execute:
     #sec[Assessment of Complementary Data Streams]
     #v(0.03in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.07in,
-      [#image("figures/original-assets/crops/picture-21.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-24.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-21.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-24.png", width: 100%)]
+      [#image("figures/original-assets/crops/seine_edna1.png", width: 100%)],
+      [#image("figures/original-assets/crops/seine_edna2.png", width: 100%)]
     )
 
     #v(0.07in)
@@ -151,8 +154,8 @@ execute:
     #small[
       [1] P. C. Escobar-Flores et al., "Multiple sampling methods to develop indices of mid-trophic levelsabundance in open ocean ecosystems", Limnol Oceanogr Methods, 2022.
       [2] C. G. Easson et al., "Combined eDNA and Acoustic Analysis Reflects Diel Vertical Migration of Mixed Consortia in the Gulf of Mexico", Front Mar Sci, 2020.\
-      [3] V.E. Kopf et al. "Combining Hydroacoustics and eDNA to Estimate Species-Specific Biomass in a Pelagic Fish Community", Environ DNA, 2025. \
-      [4] \
+      [3] V.E. Kopf et al., "Combining Hydroacoustics and eDNA to Estimate Species-Specific Biomass in a Pelagic Fish Community", Environ DNA, 2025. \
+      [4] L. Pipes and R. Nielsen, "A rapid phylogeny-based method for accurate community profiling of large-scale metabarcoding datasets", ELife, 2024.
       [5] \
       [6] \
       [7] \

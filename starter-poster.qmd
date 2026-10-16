@@ -14,7 +14,7 @@ format:
     title-row-size: 4.15
     title-font-size: 45
     authors-font-size: 30
-    department-font-size: 25
+    department-font-size: 30
     margin-top: 0.25
     margin-left: 0.55
     margin-right: 0.55
@@ -31,9 +31,9 @@ execute:
 #let colw = 12.55in
 #let gutter = 0.42in
 #let sec(title) = block(fill: red, width: 100%, inset: (x: 8pt, y: 4.5pt))[#text(fill: white, weight: 700, size: 20pt)[#title]]
-#let sub(title) = [#v(5pt)#text(weight: 700, size: 11pt)[#title]#v(2pt)]
-#let para(body) = block(width: 100%)[#text(size: 9.2pt)[#body]]
-#let small(body) = text(size: 7.0pt)[#body]
+#let sub(title) = [#v(5pt)#text(weight: 700, size: 25pt)[#title]#v(2pt)]
+#let para(body) = block(width: 100%)[#text(size: 20pt)[#body]]
+#let small(body) = text(size: 12.0pt)[#body]
 #set text(font: "Arial", size: 9.2pt, fill: uga-black)
 #set par(justify: true, leading: 0.53em)
 #set list(indent: 8pt, body-indent: 5pt)
@@ -49,12 +49,8 @@ execute:
       Quantifying ecosystem characteristics remains an important step toward data-driven conservation and restoration policy, and multiple data streams are available to this end. Acoustic data have been used in concert with biological sampling information collected for example with trawl nets [1], but there is recent interest in non-lethal eDNA sampling as a tool to complement acoustic surveying, for example by assessment of changes in eDNA profiles that occur with acoustic-sensor-measured movement of organisms [2]. There have additionally been assessment of paired hydroacoustic and eDNA surveys by replicating samples, for example along the depth gradient of pelagic lake habitat [3]. The current study investigates eDNA, purse seine, acoustic and water quality data gathered at three sites in July 2025 as potentially complementary for quantification of ecosystem characteristics.
     ]
 
-    #v(0.08in)
-    #image("figures/original-assets/crops/map.png", width: 100%)
 
-    #v(0.08in)
     #sec[Methods]
-    #sub[Data Collection]
     #para[
       #list(
         [Three sites (Oak Bay, San Juan Islands (Willow Island), and Squamish Harbor) were selected to capture a broad spatial extent around the Salish Sea.],
@@ -64,11 +60,7 @@ execute:
         [Water quality data were collected at the same central point at each site using an EXO[3?] Multiparameter sonde.]
       )
     ]
-    #text(size: 8.2pt, weight: 700)[Table 1: .]
-    #v(0.03in)
-    #image("figures/original-assets/crops/sv_v_reads.png", width: 100%)
 
-    #sub[Statistical Analysis]
     #para[
       #list(
         [Purse seine data is indexed by site, sonde data is indexed by site and depth (layer), acoustic data is 
@@ -76,6 +68,10 @@ execute:
         [Thus, models that assume independence (e.g., the two-group t-tests, unrestricted-permuatations PERMANOVA) are inappropriate except for the data is aggregated to the site-level.]
       )
     ]
+    #v(0.08in)
+    #align(center)[#text(size: 18pt, weight: 700)[Map of study area]]
+    #image("figures/original-assets/crops/map.png", width: 120%)
+    #v(0.08in)
   ],
 
   [
@@ -85,13 +81,13 @@ execute:
     ]
      #v(0.08in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.12in,
-      [#align(center)[#text(size: 14pt, weight: 700)[Cell Sv mean v. depth layer]]],
-      [#align(center)[#text(size: 14pt, weight: 700)[Cell proportion occupied v. depth layer]]],
+      [#align(center)[#text(size: 18pt, weight: 700)[Cell Sv mean v. depth layer]]],
+      [#align(center)[#text(size: 18pt, weight: 700)[Cell proportion occupied v. depth layer]]],
     )
     #v(0.04in)
     #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.06in,
-      [#image("figures/original-assets/crops/picture-14.png", width: 100%)],
-      [#image("figures/original-assets/crops/picture-15.png", width: 100%)]
+      [#image("figures/original-assets/crops/violin.png", width: 100%)],
+      [#image("figures/original-assets/crops/boxplot.png", width: 100%)]
     )
     
     #v(0.08in)
@@ -105,13 +101,15 @@ execute:
     ]
     #text(size: 8.2pt, weight: 700)[Table 1: .]
     #v(0.03in)
+    #align(center)[
     #image("figures/original-assets/crops/salsep.png", width: 50%)
+    ]
 
     #sub[NMDS]
     #para[
       #list(
         [Stress = 0.20],
-        [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth. However, there may be further depth dependence structure that led to reduced power.],
+        [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth.],
       )
     ]
     #text(size: 8.2pt, weight: 700)[Table 1: .]
@@ -124,28 +122,46 @@ execute:
   [
     #sec[Assessment of Complementary Data Streams]
     #v(0.03in)
-    #grid(columns: (1fr, 1fr), column-gutter: 0.10in, row-gutter: 0.07in,
-      [#image("figures/original-assets/crops/seine_edna1.png", width: 100%)],
-      [#image("figures/original-assets/crops/seine_edna2.png", width: 100%)]
-    )
+    #grid(
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 0.10in,
+  align(center)[
+    #image("figures/original-assets/crops/OAK_venn.png", width: 95%)
+  ],
+  align(center)[
+    #image("figures/original-assets/crops/SJI_WI_venn.png", width: 95%)
+  ],
+  align(center)[
+    #image("figures/original-assets/crops/SQU_venn.png", width: 95%)
+  ],
+)
+
+#v(0.10in)
+
+// Two images centered side by side below
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 0.10in,
+  align(center)[
+    #image("figures/original-assets/crops/seine_edna1.png", width: 90%)
+  ],
+  align(center)[
+    #image("figures/original-assets/crops/seine_edna2.png", width: 90%)
+  ],
+)
 
     #v(0.07in)
     #sec[Discussion]
     #para[
-      Prior vaccination had modest effects on subsequent immune responses, both before and after adjusting for potential confounders.
+      Acoustic sampling recapitulated seine results in terms of overall magnitude of catch.
       #list(
-        [Prior FM vaccine was associated with higher post-titers and fold-change compared to other groups.],
-        [Participants previously vaccinated with FB showed poorer fold-change across vaccine sequences.],
+        [],
+        [],
       )
-      Fold-change and post-vaccination titer capture different aspects of immunity, and patterns were not always consistent across these metrics. Models that control for baseline titers are therefore important.
+      eDNA results were useful in identifying species composition patterns within and between sites.
       #list(
-        [FM–FZSD sequence showed a large fold-change, but had low baseline titers.],
-        [FB–FB sequence showed a small boost but high post-titers.],
-      )
-      Responses varied by homologous vaccination history.
-      #list(
-        [FB–FB sequences show lower fold-change compared to other vaccination groups.],
-        [FV–FV was comparable to FZSD–FV, while FZSD–FZSD responded better than FV–FZSD.],
+        [Patterns of family detections within sites over layers were in some cases expected?],
+        [Patterns of species composition between sites showed expected clustering of depths within sites.  ],
       )
     ]
 

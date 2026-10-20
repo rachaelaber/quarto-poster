@@ -45,6 +45,7 @@ execute:
 
   [
     #sec[Background]
+    #v(0.08in)
     #para[
       Quantifying ecosystem characteristics is the cornerstone of data-driven conservation and restoration policy, and multiple data streams are employed for this purpose. Biological sampling information, collected for example with trawl nets [1], has been used in concert with acoustic data, but there is recent interest in non-lethal eDNA sampling as a tool to complement acoustic surveying. For instance, shifts in eDNA profiles accompanying organism movement as measured by acoustic sensors have been assessed [2], and paired hydroacoustic and eDNA surveys have been evaluated by replicating samples along the depth gradient of a pelagic lake habitat [3]. The current study investigates complementarity between eDNA, purse seine, and acoustic data gathered at three sites in July 2025 for quantification of ecosystem characteristics.
     ]
@@ -99,8 +100,8 @@ execute:
     #v(0.5in)
     #para[
       #list(
-        [An Non-metric Multidimensional Scaling (NMDS) ordination resulted in stress of 0.20.],
-        [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth.],
+        [An Non-metric Multidimensional Scaling (NMDS) ordination is displayed below (stress 0.19).],
+        [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth, though statistical power was low.],
       )
     ]
     #v(0.5in)
@@ -159,18 +160,16 @@ execute:
     ]
 
     #v(0.07in)
-    #sec[Findings]
+    #sec[Conclusions]
     #para[
-      Acoustic sampling recapitulated seine results in terms of overall magnitude of catch.
       #list(
-        [],
-        [],
+        [Acoustic sampling may recapitulate seine results in terms of overall magnitude of biomass.],
+        [eDNA results were useful in identifying species composition patterns within and between sites.],
+        [eDNA surveys captured a broader suite of organisms than did seine surveys.],
+        [Total reads derived from compositional data should be treated as a presence/absence metric, and do not 
+        necessarily covary with acoustic backscatter.]
       )
-      eDNA results were useful in identifying species composition patterns within and between sites.
-      #list(
-        [Patterns of family detections within sites over layers were in some cases expected?],
-        [Patterns of species composition between sites showed expected clustering of depths within sites.  ],
-      )
+      
     ]
 
     #v(0.05in)

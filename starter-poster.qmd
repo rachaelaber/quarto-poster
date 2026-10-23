@@ -63,7 +63,7 @@ execute:
     #sub[Data analysis]
     #para[
     #list(
-        [Acoustic survey data were processed in Echoview, and volume backscattering data were integrated and exported for each 10 m × 10 m cell.],
+        [Acoustic survey data were processed in Echoview, and volume backscattering data were integrated and exported for each 10-meter × 10-meter cell.],
         [Reads resulting from MiFish primer amplification were assigned using the Tronko algorithm [5], and taxonomic assignments with at most 10% divergence were retained.],
         [A combined data set was constructed with purse seine data indexed by site and with acoustic data and eDNA data indexed by site and 10-meter depth layer.]
     )
@@ -146,7 +146,7 @@ execute:
 
   [
     #sec[Assessment of Complementary Data Streams]
-    #align(center)[#text(size: 20pt, weight: 500)[Note: Categories are non-exclusive for visualization purposes in this section only.]]
+    #align(center)[#text(size: 13.5pt, weight: 500)[Note: Categories are non-exclusive for visualization purposes in this section only.]]
     #align(center)[#text(size: 20pt, weight: 700)[Overlap between seine-detected and eDNA-detected groups]]
     #v(0.03in)
     #grid(

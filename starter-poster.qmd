@@ -56,17 +56,16 @@ execute:
     #para[
       #list(
         [Three sites (Oak Bay (Admiralty Inlet), Willow Island (San Juan Islands), and Squamish Harbor (Hood Canal)) were selected to capture a broad spatial extent within the Port Gamble Sklallam's usual and accustomed areas around the Salish Sea.],
-        [At each site, purse seine captures were conducted by Long Live the Kings, The Tulalip Tribes, and United States Geological Survey using a commercial herring net. The approximate purse seine net dimensions were 402 meters long, fished effectively to 22 meters.],
+        [At each site, purse seine captures were conducted by Long Live the Kings, The Tulalip Tribes, and United States Geological Survey using a commercial herring net. The approximate net dimensions were 402 meters long, fished effectively to 22 meters.],
         [Acoustic transects were performed using a 200 kHz, split-beam BioSonics scientific echosounder to capture an area approximately representative of the purse seine catch at each site.],
         [Concurrent eDNA samples were collected using a Niskin Rosette at six depths at a central point at each site.])
       ]
     #sub[Data analysis]
     #para[
     #list(
-        [Acoustic survey data were processed in EchoView, and Sv integration results by 10-meter-squared cell were exported.],
+        [Acoustic survey data were processed in Echoview, and volume backscattering data were integrated and exported for each 10 m × 10 m cell.],
         [Reads resulting from MiFish primer amplification were assigned using the Tronko algorithm [5], and taxonomic assignments with at most 10% divergence were retained.],
-        [A combined data set was constructed with purse seine data indexed by site and with acoustic data and eDNA data indexed by site and 10-meter depth layer.],
-        [Broader taxonomic categories were in some cases composed of data in more granular categories.]
+        [A combined data set was constructed with purse seine data indexed by site and with acoustic data and eDNA data indexed by site and 10-meter depth layer.]
     )
     ]
     #v(0.08in)
@@ -124,13 +123,15 @@ execute:
     #image("figures/original-assets/crops/IMG_1066.png", width: 70%)
     #v(0.18in)
     #image("figures/original-assets/crops/IMG_1067.png", width: 70%)
+    #v(0.18in)
+    #text(size: 20pt, weight: 700)[[6]]
   ]
 )
 
 #v(0.5in)
     #para[
       #list(
-        [An Non-metric Multidimensional Scaling (NMDS) ordination is displayed below (stress 0.19).],
+        [An Non-metric Multidimensional Scaling (NMDS) ordination is displayed below (stress 0.17).],
         [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth, though statistical power was low.],
       )
     ]
@@ -145,6 +146,7 @@ execute:
 
   [
     #sec[Assessment of Complementary Data Streams]
+    #align(center)[#text(size: 20pt, weight: 500)[Note: Categories are non-exclusive for visualization purposes in this section only.]]
     #align(center)[#text(size: 20pt, weight: 700)[Overlap between seine-detected and eDNA-detected groups]]
     #v(0.03in)
     #grid(
@@ -189,24 +191,22 @@ execute:
     #sec[Conclusions]
     #para[
       #list(
-        [Acoustic sampling may recapitulate seine results in terms of overall magnitude of biomass.],
-        [eDNA surveys captured a broader suite of organisms than did seine surveys.],
-        [eDNA results were useful in identifying species composition patterns within and between sites.],
-        [eDNA sampling may have missed important species in sites that had greater depth extent than was sampled.],
-        [eDNA read data is compositional and should be treated as a presence/absence metric; total reads do not 
-        necessarily covary with acoustic backscatter.]
+        [eDNA metabarcoding can help identify potential contributors to acoustic backscatter, but differences in sampling coverage and species detectability complicate head-to-head comparison.],
+        [eDNA results were useful in identifying taxonomic group composition patterns within and between sites.],
+        [eDNA metabarcoding detected more taxonomic groups than purse seining at all three sites, although some seine-caught taxa were not detected by eDNA sampling.],
+        [Future surveys should better align spatial and depth coverage among methods and validate approaches for assigning acoustic backscatter and biomass to individual taxa.]
       )
-      
     ]
 
     #v(0.05in)
     #sec[References]
     #small[
-      [1] P. C. Escobar-Flores et al., "Multiple sampling methods to develop indices of mid-trophic levelsabundance in open ocean ecosystems", Limnol Oceanogr Methods, 2022.\
+      [1] P. C. Escobar-Flores et al., "Multiple sampling methods to develop indices of mid-trophic levels abundance in open ocean ecosystems", Limnol Oceanogr Methods, 2022.\
       [2] K. J. Andres et al., "Combining sampling gear to optimally inventory species highlights the efficiency of eDNA metabarcoding", Environ DNA, 2022.\
       [3] C. G. Easson et al., "Combined eDNA and Acoustic Analysis Reflects Diel Vertical Migration of Mixed Consortia in the Gulf of Mexico", Front Mar Sci, 2020.\
       [4] V.E. Kopf et al., "Combining Hydroacoustics and eDNA to Estimate Species-Specific Biomass in a Pelagic Fish Community", Environ DNA, 2025. \
-      [5] L. Pipes and R. Nielsen, "A rapid phylogeny-based method for accurate community profiling of large-scale metabarcoding datasets", ELife, 2024.
+      [5] L. Pipes and R. Nielsen, "A rapid phylogeny-based method for accurate community profiling of large-scale metabarcoding datasets", ELife, 2024.\
+      [6] T. W. Pietsch & J. W. Orr, "Fishes of the Salish Sea", University of Washington Press, 2019.
     ]
   ],
 )

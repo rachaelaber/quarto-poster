@@ -131,15 +131,14 @@ execute:
 #v(0.5in)
     #para[
       #list(
-        [An Non-metric Multidimensional Scaling (NMDS) ordination is displayed below (stress 0.17).],
+        [A Non-metric Multidimensional Scaling (NMDS) ordination is displayed below (stress 0.17) with sample depth displayed alongside each point.],
         [Permutational analysis of variance (PERMANOVA) with permutations restricted within sites revealed no significant effect of depth, though statistical power was low.],
       )
     ]
-    #v(0.5in)
+    #v(0.3in)
       #align(center)[#text(size: 20pt, weight: 700)[NMDS Ordination]],
 
-    #v(0.04in)
-      #align(center)[#image("figures/original-assets/crops/nmds.png", width: 70%)]
+      #align(center)[#image("figures/original-assets/crops/nmds.png", width: 68%)]
 
     
   ],
@@ -207,6 +206,11 @@ execute:
       [4] V.E. Kopf et al., "Combining Hydroacoustics and eDNA to Estimate Species-Specific Biomass in a Pelagic Fish Community", Environ DNA, 2025. \
       [5] L. Pipes and R. Nielsen, "A rapid phylogeny-based method for accurate community profiling of large-scale metabarcoding datasets", ELife, 2024.\
       [6] T. W. Pietsch & J. W. Orr, "Fishes of the Salish Sea", University of Washington Press, 2019.
+    ]
+    
+        #v(0.05in)
+    #sec[Funding]
+    #small[This project has been funded wholly or in part by the United States Environmental Protection Agency under assistance agreement 4P-02J12201 to Northwest Indian Fisheries Commission. The contents of this document do not necessarily reflect the views and policies of the Environmental Protection Agency, nor does mention of trade names or commercial products constitute endorsement or recommendation for use.
     ]
   ],
 )
